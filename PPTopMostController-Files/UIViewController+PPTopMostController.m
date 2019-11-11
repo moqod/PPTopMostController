@@ -25,7 +25,7 @@
 
 + (UIViewController *)topMostController {
     // Start with the window rootViewController
-    UIViewController *topController = ((UIWindow *)[[UIApplication sharedApplication].windows objectAtIndex:0]).rootViewController;
+    UIViewController *topController = [[UIApplication sharedApplication] keyWindow].rootViewController;
     
     // Is there any modal view on top?
     topController = [self getModalViewControllerOfControllerIfExists:topController];
